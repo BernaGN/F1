@@ -24,7 +24,7 @@ use Spatie\Permission\Models\Permission as SpatiePermission;
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class Permission extends SpatiePermission implements AuditableContracts
+class Permiso extends SpatiePermission implements AuditableContracts
 {
 
     use Auditable, Sluggable;

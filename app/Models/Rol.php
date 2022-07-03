@@ -6,7 +6,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\Permission\Models\Role as SpatieRole;
 
-class Role extends SpatieRole
+class Rol extends SpatieRole
 {
     use HasFactory, Sluggable;
 

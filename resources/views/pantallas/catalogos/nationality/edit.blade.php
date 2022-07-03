@@ -1,0 +1,34 @@
+@extends('adminlte::page')
+
+@section('title', 'Nacionalidades')
+
+@section('content_header')
+    Update Nationality
+@stop
+
+@section('content')
+    <section class="content container-fluid">
+        <div class="">
+            <div class="col-md-12">
+
+                @includeif('partials.errors')
+
+                <div class="card card-default">
+                    <div class="card-header">
+                        <span class="card-title">Update Nationality</span>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="{{ route('nationalities.update', $nationality->id) }}" role="form"
+                            enctype="multipart/form-data">
+                            {{ method_field('PATCH') }}
+                            @csrf
+
+                            @include('pantallas.catalogos.nationality.form')
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@stop

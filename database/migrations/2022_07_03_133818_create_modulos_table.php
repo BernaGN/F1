@@ -13,13 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('races', function (Blueprint $table) {
+        Schema::create('modulos', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('circuit_id')->constrained();
-            $table->foreignId('race_result_id')->constrained();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('races');
+        Schema::dropIfExists('modulos');
     }
 };

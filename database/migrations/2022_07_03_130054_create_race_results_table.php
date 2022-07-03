@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('pilot_id');
             $table->string('time');
             $table->foreignId('position_id')->constrained();
+            $table->foreignId('race_id')->constrained();
             $table->timestamps();
         });
     }
